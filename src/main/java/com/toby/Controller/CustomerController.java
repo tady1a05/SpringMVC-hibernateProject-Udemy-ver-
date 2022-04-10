@@ -49,7 +49,7 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/deleteCustomer")
-	public String deleteCustomer(@RequestParam("custId") int custId) {
+	public String deleteForm(@RequestParam("custId") int custId) {
 		Customer customer = customerServiceIntf.getCustomer(custId);
 		customerServiceIntf.deleteCustomer(customer);
 		return "redirect: list";
